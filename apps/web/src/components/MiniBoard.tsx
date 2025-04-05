@@ -17,7 +17,7 @@ export default function MiniBoard() {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-1 border-2 border-black p-1">
+    <div className="grid grid-cols-3 gap-1 p-1 border-2 rounded-md bg-gray-100 shadow-md">
       {cells.map((val, i) => (
         <Cell key={i} value={val} onClick={() => handleClick(i)} />
       ))}
