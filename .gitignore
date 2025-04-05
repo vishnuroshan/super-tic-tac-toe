@@ -1,0 +1,39 @@
+# Node & package managers
+node_modules/
+pnpm-lock.yaml
+*.tsbuildinfo
+
+# Build output
+dist/
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*.local
+.env.local
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.sw?
+
+# Vitest
+coverage/
+vitest-*
+
+# Turbo
+.turbo/
+
+# Others
+*.log
