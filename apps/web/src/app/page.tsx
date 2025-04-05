@@ -1,7 +1,11 @@
 "use client";
 
-import { greet } from "@/game-core/index";
+import GameBoard from "../components/Gameboard";
 
 export default function HomePage() {
-  return <>{greet("Super Tic Tac Toe")}</>;
+  return (
+    <main className="min-h-screen flex items-center justify-center bg-gray-100">
+      <GameBoard />
+    </main>
+  );
 }
