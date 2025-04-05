@@ -15,16 +15,26 @@ A scalable, type-safe, monorepo-based implementation of Super Tic Tac Toe using 
 
 ## 📁 Folder Structure
 
-super-tic-tac-toe/
-├── apps/
-│   └── web/              # Next.js frontend app
-├── packages/
-│   └── game-core/        # Shared game logic (pure TypeScript)
-├── .gitignore
-├── package.json
-├── pnpm-workspace.yaml
-└── turbo.json
-
+.
+└── super-tic-tac-toe/
+    ├── apps/
+    │   └── web/  ← Next.js frontend app/
+    │       ├── app/
+    │       ├── components/
+    │       ├── public/
+    │       ├── styles/
+    │       ├── tsconfig.json
+    │       └── package.json
+    ├── packages/
+    │   └── game-core/  ← Shared game logic/
+    │       ├── src/
+    │       │   └── index.ts
+    │       ├── tsconfig.json
+    │       └── package.json
+    ├── .gitignore
+    ├── package.json  ← Root, with workspaces
+    ├── pnpm-workspace.yaml
+    └── turbo.json
 
 ---
 
