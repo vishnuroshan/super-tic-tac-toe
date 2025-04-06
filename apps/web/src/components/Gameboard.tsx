@@ -6,24 +6,38 @@ import MiniBoard from "./MiniBoard";
 export default function GameBoard() {
   const [gameState, setGameState] = useState<GameState>(createNewGame());
 
-  const onCellClick = (miniBoardIndex: number, cellIndex: number) => {
+  const onCellClick = (
+    miniBoardIndex: number,
+    cellIndex: number,
+    isBoardDisabled: boolean,
+  ) => {
     // You may want to add validations here based on nextAllowedBoard, etc.
-    const newState = handleMove(gameState, miniBoardIndex, cellIndex);
-    console.log(newState);
-    setGameState(newState);
+    if (!isBoardDisabled) {
+      const newState = handleMove(gameState, miniBoardIndex, cellIndex);
+      console.log(newState);
+      setGameState(newState);
+    }
   };
 
   return (
     <div>
       <div className="grid grid-cols-3 gap-4">
-        {gameState.boards.map((board, i) => (
-          <MiniBoard
-            status={gameState.boardStatus[i]}
-            key={i}
-            cells={board}
-            onCellClick={(cellIndex: number) => onCellClick(i, cellIndex)}
-          />
-        ))}
+        {gameState.boards.map((board, i) => {
+          const isBoardDisabled =
+            gameState.nextAllowedBoard !== null &&
+            gameState.nextAllowedBoard !== i;
+          return (
+            <MiniBoard
+              status={gameState.boardStatus[i]}
+              key={i}
+              cells={board}
+              onCellClick={(cellIndex: number) =>
+                onCellClick(i, cellIndex, isBoardDisabled)
+              }
+              disabled={isBoardDisabled}
+            />
+          );
+        })}
       </div>
       {gameState.winner && (
         <div className="mt-4 text-red-600">

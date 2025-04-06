@@ -5,12 +5,14 @@ type MiniBoardProps = {
   cells: PlayerCell[];
   onCellClick: (index: number) => void;
   status?: MiniBoardStatus;
+  disabled?: boolean;
 };
 
 export default function MiniBoard({
   cells,
   onCellClick,
   status,
+  disabled = false,
 }: MiniBoardProps) {
   let shadowClass = "shadow-md"; // default
   if (status === "won-X") {
@@ -20,7 +22,7 @@ export default function MiniBoard({
   }
   return (
     <div
-      className={`grid grid-cols-3 gap-1 p-1 border-2 rounded-md bg-gray-100 ${shadowClass}`}
+      className={`grid grid-cols-3 gap-1 p-1 border-2 rounded-md bg-gray-100 ${shadowClass} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
     >
       {cells.map((val, i) => (
         <Cell key={i} value={val} onPlayerClick={() => onCellClick(i)} />
