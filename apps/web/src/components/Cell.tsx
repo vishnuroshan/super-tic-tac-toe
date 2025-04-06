@@ -1,14 +1,14 @@
-"use client";
+import { PlayerCell } from "@/game-core/types";
 
 type CellProps = {
-  value: "X" | "O" | null;
-  onClick: () => void;
+  value: PlayerCell;
+  onPlayerClick: () => void;
 };
 
-export default function Cell({ value, onClick }: CellProps) {
+export default function Cell({ value, onPlayerClick }: CellProps) {
   return (
     <button
-      onClick={onClick}
+      onClick={onPlayerClick}
       className="w-full h-12 border border-gray-400 text-2xl font-bold flex  aspect-square items-center justify-center hover:bg-gray-200 cursor-pointer"
     >
       <span className={value === "X" ? "text-blue-600" : "text-red-600"}>
