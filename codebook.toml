@@ -1,0 +1,9 @@
+dictionaries = []
+words = [
+    "playero",
+    "playerx",
+]
+flag_words = []
+ignore_paths = []
+ignore_patterns = []
+use_global = true

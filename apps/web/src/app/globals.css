@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #f9fafb;
+    --foreground: #171717;
+    --font-poppins-sans: "Poppins", sans-serif;
+    --font-poppins-mono: "Poppins", roboto;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    --color-primary: #4f46e5;
+    --color-secondary: #8b5cf6;
+    --color-white: #ffffff;
+    --color-accent: #34d399;
+    --color-playerx: #4f46e5;
+    --shadow-playerx: [0px_0px_12px_6px_#4f46e5];
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --color-playero: #e92b64;
+    --shadow-playero: [0px_0px_12px_6px_#e92b64];
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-poppins-sans);
+    --font-mono: var(--font-poppins-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+}
+.game-board .cell {
+    transition: all 0.2s ease;
+}
+.game-board .cell:hover:not(.played) {
+    background-color: rgba(79, 70, 229, 0.1);
+}
+.game-board .cell.x-played::before {
+    color: #4f46e5;
+    font-weight: 700;
+}
+.game-board .cell.o-played::before {
+    color: #8b5cf6;
+    font-weight: 700;
+}
+.main-board.x-won::after {
+    position: absolute;
+    font-size: 5rem;
+    color: rgba(79, 70, 229, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.main-board.o-won::after {
+    position: absolute;
+    font-size: 5rem;
+    color: rgba(139, 92, 246, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.main-board.draw::after {
+    position: absolute;
+    font-size: 1.5rem;
+    color: rgba(107, 114, 128, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4f46e5;
+    border-radius: 50%;
+    cursor: pointer;
 }

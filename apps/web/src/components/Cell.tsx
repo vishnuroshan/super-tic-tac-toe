@@ -9,9 +9,9 @@ export default function Cell({ value, onPlayerClick }: CellProps) {
   return (
     <button
       onClick={onPlayerClick}
-      className="w-full h-12 border border-gray-400 text-2xl font-bold flex  aspect-square items-center justify-center hover:bg-gray-200 cursor-pointer"
+      className="cell flex items-center justify-center bg-white aspect-square text-2xl font-bold cursor-pointer hover:bg-gray-100"
     >
-      <span className={value === "X" ? "text-blue-600" : "text-red-600"}>
+      <span className={value === "X" ? "text-playerx" : "text-playero"}>
         {value}
       </span>
     </button>

@@ -14,15 +14,15 @@ export default function MiniBoard({
   status,
   disabled = false,
 }: MiniBoardProps) {
-  let shadowClass = "shadow-md"; // default
+  let shadowClass = "border-none"; // default
   if (status === "won-X") {
-    shadowClass = "shadow-[0px_0px_12px_6px_#4299e1]";
+    shadowClass = "border-2 border-playerx";
   } else if (status === "won-O") {
-    shadowClass = "shadow-[0px_0px_12px_6px_#f56565]";
+    shadowClass = "border-2 border-playero";
   }
   return (
     <div
-      className={`grid grid-cols-3 gap-1 p-1 border-2 rounded-md bg-gray-100 ${shadowClass} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+      className={`game-board grid grid-cols-3 rounded gap-1 h-full shadow-lg ${shadowClass} ${disabled ? "opacity-30 cursor-not-allowed" : ""}`}
     >
       {cells.map((val, i) => (
         <Cell key={i} value={val} onPlayerClick={() => onCellClick(i)} />
