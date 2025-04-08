@@ -9,7 +9,7 @@ export function IconButton({ icon, ...props }: IconButtonProps) {
   return (
     <button
       {...props}
-      className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/20 bg-white/10 transition-colors duration-200"
+      className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-white/20 bg-white/10 transition-colors duration-200"
       type="button"
     >
       {icon}
