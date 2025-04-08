@@ -3,7 +3,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "packages/game-core/dist/**"]
+      "outputs": [".next/**", "dist/**"]
     },
     "check-types": {
       "dependsOn": ["^check-types"]
