@@ -7,7 +7,7 @@ import { Settings } from "../components/icons/Settings";
 import { GameInfo } from "../components/GameInfo";
 import { GameControls } from "../components/GameControls";
 import { useState } from "react";
-import { Rules } from "../components/Rules";
+import { Rules } from "../components/dialogs/Rules";
 
 export default function HomePage() {
   const [showRules, setShowRules] = useState<boolean>(false);

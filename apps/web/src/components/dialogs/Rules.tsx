@@ -1,5 +1,5 @@
-import { IconButton } from "./IconButton";
-import { Close } from "./icons/Close";
+import { IconButton } from "../IconButton";
+import { Close } from "../icons/Close";
 
 export function Rules({ onClose }: { onClose: () => void }) {
   return (
