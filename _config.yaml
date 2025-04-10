@@ -1,0 +1,4 @@
+# _config.yml
+title: Super Tic Tac Toe
+description: A modern, AI-assisted take on the classic game
+theme: jekyll-theme-minimal
