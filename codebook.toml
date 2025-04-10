@@ -1,7 +1,9 @@
 dictionaries = []
 words = [
+    "beforeunload",
     "playero",
     "playerx",
+    "returnvalue",
 ]
 flag_words = []
 ignore_paths = []

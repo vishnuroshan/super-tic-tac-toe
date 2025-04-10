@@ -3,8 +3,13 @@ import MiniBoard from "./MiniBoard";
 import { MiniBoard as Board } from "@/game-core/types";
 import { ReactNode, useEffect, useState } from "react";
 import { GameEnd } from "./dialogs/GameEnd";
+import { GameMode } from "../types/game";
 
-export default function GameBoard() {
+interface GameBoardProps {
+  mode?: GameMode;
+}
+
+export default function GameBoard({ mode = "local" }: GameBoardProps) {
   const { gameState, handleStateMove, resetGame } = useGameStore();
   const [showGameEnd, setShowGameEnd] = useState<boolean>(false);
 
@@ -53,26 +58,23 @@ export default function GameBoard() {
           }}
         />
       )}
-      <div className="w-full md:w-3/4">
-        <div className="bg-white rounded shadow-sm p-6 mb-4">
-          <div id="game-status" className="text-center mb-6">
-            <div className="text-lg font-semibold text-gray-800">
-              {/* {`Player ${gameState.currentPlayer}'s turn`} */}
-              Game Status
-            </div>
-            <div className="text-sm text-gray-500">
-              {gameState.nextAllowedBoard === null
-                ? `Select any cell to make your move`
-                : `Select a cell in the highlighted
+      <div className="bg-white rounded shadow-sm p-6 mb-4">
+        <div id="game-status" className="text-center mb-6">
+          <div className="text-lg font-semibold text-gray-800">
+            {mode === "online" ? "Online Match" : "Local Match"}
+          </div>
+          <div className="text-sm text-gray-500">
+            {gameState.nextAllowedBoard === null
+              ? `Select any cell to make your move`
+              : `Select a cell in the highlighted
                 board`}
-            </div>
           </div>
-          <div
-            id="super-board"
-            className="grid grid-cols-3 gap-4 max-w-2xl mx-auto"
-          >
-            {gameState.boards.map(renderMiniBoard)}
-          </div>
+        </div>
+        <div
+          id="super-board"
+          className="grid grid-cols-3 gap-4 max-w-2xl mx-auto"
+        >
+          {gameState.boards.map(renderMiniBoard)}
         </div>
       </div>
     </>
