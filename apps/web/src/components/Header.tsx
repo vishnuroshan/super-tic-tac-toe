@@ -6,7 +6,6 @@ import { Info } from "./icons/Info";
 import { Settings } from "./icons/Settings";
 import { Rules } from "./dialogs/Rules";
 import { usePathname, useRouter } from "next/navigation";
-import Link from "next/link";
 
 export function Header() {
   const [showRules, setShowRules] = useState<boolean>(false);
