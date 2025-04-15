@@ -10,7 +10,7 @@ export function Rules({ onClose }: { onClose: () => void }) {
     >
       <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-xl font-bold">How to Play Super Tic Tac Toe</h2>
+          <h2 className="text-xl font-bold">How to Play Uber XO</h2>
           <IconButton icon={<Close />} onClick={() => onClose} />
         </div>
         <div className="space-y-4">

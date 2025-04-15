@@ -8,7 +8,7 @@ export default function HomePage() {
 
   return (
     <div className="h-screen flex flex-col items-center justify-center bg-white px-4">
-      <h1 className="text-3xl font-bold mb-8 text-center">Super Tic Tac Toe</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Uber XO</h1>
       <div className="flex flex-col gap-4 w-full max-w-xs">
         <Button
           label=" 🎮 Play"

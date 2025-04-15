@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Super XO",
+  title: "Uber XO",
   description: "A game of tic tac toe with a twist",
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="apple-mobile-web-app-title" content="Super-XO" />
+        <meta name="apple-mobile-web-app-title" content="Uber-XO" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

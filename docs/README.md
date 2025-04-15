@@ -1,12 +1,12 @@
-# 🧠 Super Tic Tac Toe - Technical Documentation
+# 🧠 Uber XO - Technical Documentation
 
-Welcome to the internal technical documentation for **Super Tic Tac Toe**. This project is a modern, AI-assisted take on the classic game, built to support both local and online multiplayer with an emphasis on clean architecture, type safety, and responsive UX.
+Welcome to the internal technical documentation for **Uber XO**. This project is a modern, AI-assisted take on the classic game, built to support both local and online multiplayer with an emphasis on clean architecture, type safety, and responsive UX.
 
 ---
 
 ## 📁 Project Overview
 
-A real-time multiplayer web game inspired by **Super Tic Tac Toe** (a 3x3 grid of mini 3x3 boards). Players must win mini-boards to claim macro-board victory. Built for fun and learning, this is a fully vibe-coded project using ChatGPT & Claude, deployed on Vercel.
+A real-time multiplayer web game inspired by **Uber XO** (a 3x3 grid of mini 3x3 boards). Players must win mini-boards to claim macro-board victory. Built for fun and learning, this is a fully vibe-coded project using ChatGPT & Claude, deployed on Vercel.
 
 **Live URL**: [super-tic-tac-toe-three.vercel.app](https://super-tic-tac-toe-three.vercel.app)
 

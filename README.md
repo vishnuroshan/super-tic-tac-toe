@@ -1,6 +1,6 @@
-# 🧠 Super Tic Tac Toe
+# 🧠 Uber XO
 
-A modern, AI-assisted take on the classic game — **Super Tic Tac Toe** (a 3x3 grid of 3x3 boards). Built with ❤️ for clean architecture, online play, and full vibe coding.
+A modern, AI-assisted take on the classic game — **Super XO** (a 3x3 grid of 3x3 boards). Built with ❤️ for clean architecture, online play, and full vibe coding.
 
 🌐 [Live Demo](https://super-tic-tac-toe-three.vercel.app)
 📚 [Technical Documentation](./docs/technical-documentation.md)
