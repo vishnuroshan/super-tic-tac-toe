@@ -14,18 +14,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Uber XO – Multiplayer Tic Tac Toe",
+  title: "Uber XO – A Strategic Twist on Super Tic Tac Toe",
   description:
-    "A next-level multiplayer Tic Tac Toe experience. Built with AI, Next.js, Zustand & Turbo.",
+    "Play 9 boards at once. Win the war, not just the battle. Uber XO is a modern take on Tic Tac Toe’s wildest variant – Super Tic Tac Toe.",
   openGraph: {
-    title: "Uber XO – Multiplayer Tic Tac Toe",
+    title: "Uber XO – A Strategic Twist on Super Tic Tac Toe",
     description:
-      "Play a strategic twist on Tic Tac Toe with friends. Online. Realtime. Clean UI.",
+      "Play 9 boards at once. Win the war, not just the battle. Uber XO is a modern take on Tic Tac Toe’s wildest variant – Super Tic Tac Toe.",
     url: "https://uberxo.vercel.app",
     siteName: "Uber XO",
     images: [
       {
-        url: "https://uberxo.vercel.app/og-preview.png", // Add this image!
+        url: "https://uberxo.vercel.app/og-preview.png", // Add this image
         width: 1200,
         height: 630,
         alt: "Uber XO Game Preview",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Uber XO – Multiplayer Tic Tac Toe",
+    title: "Uber XO – A Strategic Twist on Super Tic Tac Toe",
     description:
-      "Challenge your friends to a modern spin on Tic Tac Toe. Try it now!",
+      "Play 9 boards at once. Win the war, not just the battle. Built with AI, Next.js, Zustand, and Vercel.",
     images: ["https://uberxo.vercel.app/og-preview.png"],
   },
 };
