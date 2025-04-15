@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Uber XO – Multiplayer Tic Tac Toe",
   description:
     "A next-level multiplayer Tic Tac Toe experience. Built with AI, Next.js, Zustand & Turbo.",
