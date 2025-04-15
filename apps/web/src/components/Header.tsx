@@ -32,6 +32,7 @@ export function Header() {
       <header className="bg-gradient-to-r from-primary/90 via-primary to-secondary shadow-md py-3">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <h1
+            id="Super XO"
             className="text-2xl font-bold text-white cursor-pointer"
             onClick={handleTitleClick}
           >

@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { GameContainer } from "../GameContainer";
 import { WaitingRoom } from "./WaitingRoom";
@@ -8,10 +9,8 @@ export default function OnlineGameLoader({ roomCode }: { roomCode: string }) {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log("after");
       setJoined(true);
     }, 2000); // Simulated "join"
-
     return () => clearTimeout(timer);
   }, []);
 
