@@ -8,7 +8,8 @@
     "dev:web": "turbo --filter web dev",
     "build": "turbo run build",
     "build:web": "turbo --filter web build",
-    "check": "turbo run typecheck"
+    "check": "turbo run typecheck",
+    "test": "turbo run test"
   },
   "packageManager": "pnpm@10.8.0",
   "keywords": [],

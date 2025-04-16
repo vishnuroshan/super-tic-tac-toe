@@ -75,6 +75,15 @@ export function handleMove(
     boardStatus: [...state.boardStatus],
   };
 
+  // IMPORTANT - Check nextAllowedBoard constraint
+  if (
+    newState.nextAllowedBoard !== null &&
+    boardIndex !== newState.nextAllowedBoard
+  ) {
+    console.log("Invalid move: nextAllowedBoard constraint not met");
+    return state; // Return original state, not newState, to avoid reference issues
+  }
+
   // Validate move: if game is over or mini-board already won/draw, ignore
   if (newState.winner || newState.boardStatus[boardIndex] !== "in-progress") {
     return newState;
